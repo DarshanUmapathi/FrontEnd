@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tables and its uses in HTML</title>
+    <link rel="stylesheet" type="text/css" href="tables.css">
+</head>
+
+<body>
+    <div id="div1"> In This Page we will try few operations on tables </div>
+    <div id="div2">The first table will be about kids in Senior batch and their detail</div>
+    <table id="t1">
+        <caption>Team List</caption>
+        <!-- We can create multiple tables and th is table header and tr table row and td specifies the data
+                         We can refer multiple tables using the id's assigned to them-->
+        <th>Name</th>
+        <th>Batch</th>
+        <th>Age</th>
+        <!-- rowspan="3" and colspan="2"
+             can be used to check or enter if more than one entry is given row wise or column wise -->
+        <th>Contact</th>
+        <th>Coaches</th>
+
+        <tr>
+            <td>Ravi</td>
+            <td>Senior</td>
+            <td>14</td>
+            <td>9877665544</td>
+            <td>Ravi Kumar</td>
+        </tr>
+        <tr>
+            <td>Rajesh</td>
+            <td>Senior</td>
+            <td>12</td>
+            <td>9988221134</td>
+            <td>Ravi Kumar</td>
+        </tr>
+        <tr>
+            <td>Shreyas</td>
+            <td>Senior</td>
+            <td>16</td>
+            <td>8877443322</td>
+            <td>Ravi Kumar</td>
+        </tr>
+        <tr>
+            <td>Gauri</td>
+            <td>Senior</td>
+            <td>11</td>
+            <td>1122334455</td>
+            <td>Ravi Kumar</td>
+        </tr>
+        <tr>
+            <td>aadhya</td>
+            <td>Senior</td>
+            <td>15</td>
+            <td>7766554499</td>
+            <td>Ravi Kumar</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <p>The Second table will be about kids in junior batch and their detail</p>
+    <table id="t2">
+        <th>Name</th>
+        <th>Batch</th>
+        <th>Age</th>
+        <th>Contact Details</th>
+        <th>Coaches</th>
+
+        <tr>
+            <td>chitra</td>
+            <td>Junior</td>
+            <td>9</td>
+            <td>9877665544</td>
+            <td>Chiranjeevi</td>
+        </tr>
+        <tr>
+            <td>raj</td>
+            <td>junior</td>
+            <td>9</td>
+            <td>998821134</td>
+            <td>Chiranjeevi</td>
+        </tr>
+        <tr>
+            <td>Shreyas</td>
+            <td>junior</td>
+            <td>6</td>
+            <td>8878843322</td>
+            <td>Chiranjeevi</td>
+        </tr>
+        <tr>
+            <td>Gauri</td>
+            <td>junior</td>
+            <td>10</td>
+            <td>1122999455</td>
+            <td>Chiranjeevi</td>
+        </tr>
+        <tr>
+            <td>aadhya</td>
+            <td>junior</td>
+            <td>8</td>
+            <td>7766554499</td>
+            <td>Chiranjeevi</td>
+        </tr>
+    </table>
+    <p>Coaches and Salary</p>
+    <table id="t3">
+        <th>Name</th>
+        <th>Salary</th>
+        <tr>
+            <th id="cl1" colspan="2">Head Coaches</th>
+        </tr>
+        <tr>
+            <td>Ravi Kumar</td>
+            <td>10,000</td>
+        </tr>
+        <tr>
+            <td>Bhumi sir</td>
+            <td>9500</td>
+        </tr>
+        <tr>
+            <th id="cl1" colspan="2">Secondary Coaches</th>
+        </tr>
+        <tr>
+            <td>Chiranjeevi sir</td>
+            <td>9500</td>
+        </tr>
+        <tr>
+            <td>Darshan</td>
+            <td>9500</td>
+        </tr>
+    </table>
+
+
+
+</body>

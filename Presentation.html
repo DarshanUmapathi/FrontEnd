@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Presentation Section of HTML</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+
+</head>
+
+<body>
+    <h1 align="center">Presentation in HTML</h1>
+    <div>This is a demo on Images and image used as an hyperlink </div>
+    <a href="https://en.wikipedia.org/wiki/Thor_(Marvel_Comics)" target="_self">
+        <img title="Thor" src="TH.jpg" alt="Thor's hammer" height=200px weight=200px />
+    </a>
+    <br>
+    <img src="https://www.animatedimages.org/data/media/159/animated-basketball-image-0089.gif" border="0" alt="animated-basketball-image-0089"
+        style="float: right;" />
+    <img src="https://www.animatedimages.org/data/media/159/animated-basketball-image-0052.gif" border="0" alt="animated-basketball-image-0089"
+    />
+
+    <!-- adding gif from and online link in image tag -->
+    <!--use this :  https://www.animatedimages.org/data/media/159/animated-basketball-image-0052.gif -->
+
+    <!-- <img title="Anchor with rope" src="anchor-with-rope.svg" alt="Anchor with rope" height=200px weight=200px /> -->
+
+
+    <!-- Overview of lists  (ordered and unordered)       -->
+    <br>
+    <br>
+
+    <img title="Mustang" src="mustang.jpg" alt="Mustang" usemap="#mustang" />
+
+    <map name="mustang">
+        <area target="_blank" alt="tyre" title="tire" href="https://en.wikipedia.org/wiki/Tire" coords="175,109,26" shape="circle">
+        <area target="_blank" alt="windsheild" title="windsheild" href="https://en.wikipedia.org/wiki/Windshield" coords="113,40,217,21"
+            shape="rect">
+        <area target="_blank" alt="tyre" title="tire" href="https://en.wikipedia.org/wiki/Tire" coords="288,95,18" shape="circle">
+        <area target="_blank" alt="headlight" title="headlight" href="https://en.wikipedia.org/wiki/Headlamp" coords="105,73,152,72,117,84,144,76"
+            shape="poly">
+        <area target="_blank" alt="door" title="door" href="https://en.wikipedia.org/wiki/Car_door" coords="213,103,260,54" shape="rect">
+        <area target="_blank" alt="mustang logo" title="mustang logo" href="https://www.ford.com/cars/mustang/" coords="50,77,7"
+            shape="circle">
+    </map>
+
+    <div>This is a demo on lists </div>
+    <p>Unordered List</p>
+    <ul>
+        <li>darshan</li>
+        <li>manoj</li>
+        <li>karthik</li>
+    </ul>
+    <ul style="list-style-type:circle">
+        <li>Darshan</li>
+        <li>Manoj</li>
+        <li>Karthik</li>
+    </ul>
+    <ul style="list-style-type:decimal-leading-zero">
+        <li>Darshan</li>
+        <li>Manoj</li>
+        <li>Karthik</li>
+    </ul>
+    <br>
+    <p>Ordered List</p>
+
+    <ol>
+        <li>Apple</li>
+        <li>Ball</li>
+        <li>Cat</li>
+
+    </ol>
+
+    <ol type="i">
+        <li>Apple</li>
+        <li>Ball</li>
+        <li>Cat</li>
+
+    </ol>
+
+    <br>
+    <p>Nested Lists</p>
+    <p> List items can contain new list, and other HTML elements, like images and links, etc.</p>
+    <p>
+        <code>Unordered</code>
+    </p>
+    <ul>
+        <!--style="list-style-type:decimal-leading-zero"-->
+        <li>Coffee</li>
+        <ul>
+            <li>Black</li>
+            <li>Regular</li>
+        </ul>
+        <li>Tea</li>
+        <ul>
+            <li>Lemon</li>
+            <li>Green</li>
+        </ul>
+    </ul>
+
+    <p>
+        <code>Ordered</code>
+    </p>
+    <ol>
+        <li>Coffee</li>
+        <ol type="i">
+            <li>Black</li>
+            <li>Regular</li>
+        </ol>
+        <li>Tea</li>
+        <ol type="i">
+            <li>Lemon</li>
+            <li>Green</li>
+        </ol>
+    </ol>
+    <p>Unordered nested inside ordered List viceversa is also possible </p>
+    <ol>
+        <li>Coffee</li>
+        <ul>
+            <li>Black</li>
+            <li>Regular</li>
+        </ul>
+        <li>Tea</li>
+        <ul>
+            <li>Lemon</li>
+            <li>Green</li>
+        </ul>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>Black Coffee</dd>
+            <dt>Asprin</dt>
+            <dd>Meds</dd>
+
+
+        </dl>
+    </ol>
+
+
+    <code>
+        <pre>
+            main()
+            {
+            printf("Hello World")
+            }
+                   
+        </pre>
+        </code>
+
+    <code>
+        <pre>
+          (a+b)<sup>2</sup> = a<sup>2</sup>+b<sup>2</sup>+2ab                  
+        </pre>
+        </code>
+
+    <code>
+        <pre>
+          H<sub>2</sub>SO<sub>4</sub> - Sulphuric Acid               
+        </pre>
+        </code>
+
+
+    <p>Lets Create a Table</p>
+    <code>Table with &lt;thead&gt;</code>
+    <table>
+
+        <tr>
+            <thead>First Name</thead>
+            <thead>Last Name</thead>
+            <thead>Email</thead>
+            <thead>Salary</thead>
+        </tr>
+
+
+
+    </table>
+    <code>Table with &lt;th&gt; used more often</code>
+    <table id="t1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>Darshan</td>
+            <td>U</td>
+            <td>abc@gmail.com</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>Karthik</td>
+            <td>P</td>
+            <td>abc1@gmail.com</td>
+            <td>35000</td>
+        </tr>
+        <tr>
+            <td>Ranjan</td>
+            <td>U</td>
+            <td>abcd@gmail.com</td>
+            <td>25000</td>
+        </tr>
+        <tr>
+            <td>chiranjeevi</td>
+            <td>G</td>
+            <td>cg@gmail.com</td>
+            <td>45000</td>
+        </tr>
+
+    </table>
+    <br>
+    <br>
+    <br>
+    <table id="t2">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>Darshan</td>
+            <td>U</td>
+            <td>abc@gmail.com</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>Karthik</td>
+            <td>P</td>
+            <td>abc1@gmail.com</td>
+            <td>35000</td>
+        </tr>
+        <tr>
+            <td>Ranjan</td>
+            <td>U</td>
+            <td>abcd@gmail.com</td>
+            <td>25000</td>
+        </tr>
+        <tr>
+            <td>chiranjeevi</td>
+            <td>G</td>
+            <td>cg@gmail.com</td>
+            <td>45000</td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+
+</html>

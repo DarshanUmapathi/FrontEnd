@@ -1,0 +1,36 @@
+Mingw - download for windows 
+install.
+cmd 
+type command :  mingw-get
+if it throws an error : "Command not recognized"
+Check your loaction and set environment variables 
+Properpties and advanced system setting -- env varibles 
+add new PATH till: mingw\bin.
+
+then type : mingw-get install gcc
+then type : mingw-get install g++
+
+type g++ in command promot to check 
+
+
+Testing the compiler 
+
+#include <stdio.h>
+int  main()
+{
+printf("Hello World")
+}
+
+save as hello.c
+
+navigate to the location where this is saved in the command promot type:
+
+gcc hello.c -o myCfile  // this creates a .exe file in the name of myCfile - myCfile.exe in the same location
+
+type : myCfile.exe and then enter 
+output will be printed in the command promte 
+
+Dowload VS code and install 
+
+Extension
+

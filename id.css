@@ -1,0 +1,14 @@
+.div1{
+    background-color: aqua;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#div2{
+    background-color: darkgray;
+    color: firebrick;
+    font-style: italic;
+}
+.div3{
+    text-align: center;
+    font: small-caption;
+}

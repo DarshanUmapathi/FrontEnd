@@ -1,0 +1,38 @@
+#div1{
+    color:greenyellow ;
+}
+#div2{
+    font-style: italic;
+}
+#t1 {
+    border: 1px black solid;
+    width: 100%; /*this fills the wholw page*/
+    border-collapse: collapse;
+    border-spacing: 12px;
+    
+}
+
+
+#t1 td , #t1 th{
+    border: 1px black solid;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+#t2 , #t2 td , #t2 th{
+    border: 1px black solid;
+    border-collapse: collapse;
+    padding: 15px;
+}
+#t2 tr:nth-child(even){
+    background-color:lightskyblue;
+}
+#t3, #t3 td , #t3 th {
+    border: 1px black solid;
+    /* width: 100%; this fills the wholw page */
+    border-collapse: collapse;
+    border-spacing: 12px;
+}
+#cl1{
+    background-color: gray;
+}

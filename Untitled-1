@@ -1,0 +1,79 @@
+import java.util.Properties;
+import java.io.InputStream;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import com.boomi.execution.ExecutionUtil;
+import com.boomi.execution.ExecutionManager;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+for( int i = 0; i < dataContext.getDataCount(); i++ ) {
+	
+	      Properties props = dataContext.getProperties(i);
+    Document docIn;
+    InputStream is;
+    try{
+   is = dataContext.getStream(i);
+  
+              String rec="";
+              DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+              DocumentBuilder builderel=factory.newDocumentBuilder();
+               docIn=builderel.parse(is);
+                                  logger = ExecutionUtil.getBaseLogger();
+                                                  //set the idoc type IDOCTYP as dynamic process property
+                                                  
+                                                 // idocType=docIn.getElementsByTagName("IDOCTYP").item(0).getFirstChild().getNodeValue();
+                                                  //ExecutionUtil.setDynamicProcessProperty("IDOCTYP",idocType,false);
+                                                  
+                                                  //set the message type MESTYP as dynamic process property
+                                                  
+                                                  messageType=docIn.getElementsByTagName("MESTYP").item(0).getFirstChild().getNodeValue();
+                                                  logger.info("******messageType"+ messageType)
+                                                 // ExecutionUtil.setDynamicProcessProperty("MESTYP",messageType,false);         
+                                                  props.setProperty("document.dynamic.userdefined.MESTYP", messageType);
+                                                 
+                                                 
+                                                  StringWriter writer = new StringWriter();
+           DOMSource domSource = new DOMSource(docIn);
+                                   StreamResult result = new StreamResult(writer);
+           TransformerFactory tf = TransformerFactory.newInstance();
+           Transformer transformer = tf.newTransformer();
+           transformer.transform(domSource, result);
+           writer.flush();
+  is = new ByteArrayInputStream(writer.toString().getBytes("UTF-8"));
+
+  dataContext.storeStream(is, props);
+}
+
+catch(Exception e) 
+{
+    
+           //logger = ExecutionUtil.getBaseLogger();
+           //logger.info("***Error in Processing Document: ***");
+    
+            //System.out.println("Caught inside fun()."); 
+          logger = ExecutionUtil.getBaseLogger();
+           propValue = props.getProperty("connector.track.sftp.filename");
+           ddp = "_ERROR_" + propValue;
+           logger.info("*****Document  : "+propValue+" failed in DP shape with error:"+e);
+     //       throw e; // rethrowing the exception 
+            props.setProperty("document.dynamic.userdefined.DDP_ERROR","true");
+           StringWriter writer = new StringWriter();
+           DOMSource domSource = new DOMSource(docIn);
+           StreamResult result = new StreamResult(writer);
+           TransformerFactory tf = TransformerFactory.newInstance();
+           Transformer transformer = tf.newTransformer();
+           transformer.transform(domSource, result);
+           writer.flush();
+           is = new ByteArrayInputStream(writer.toString().getBytes("UTF-8"));
+
+  dataContext.storeStream(is, props);
+                //System.out.println("Caught inside fun()."); 
+          //  throw e; // rethrowing the exception
+}
+}
